@@ -14,7 +14,7 @@ public class QuadraticEquation {
         double b = inputNum("b");
         double c = inputNum("c");
         if (a == 0) {
-            equation(b, c);
+            findLineEquation(b, c);
         } else {
             double d = findDiscriminant(a, b, c);
             if (d > 0) {
@@ -28,7 +28,7 @@ public class QuadraticEquation {
                 System.out.println("Уравнение имеет два совпадающих вещественных корня:");
                 System.out.println("\"x1\"=\"x2\" и равны " + x);
             } else {
-                System.out.println("Уравнение имеет два мнимых корня! Реализация их вычисления в разработке.");
+                System.out.println("Уравнение имеет два мнимых корня! Реализация их вычисления в разработке");
             }
         }
     }
@@ -37,8 +37,8 @@ public class QuadraticEquation {
         double k;
         while (true) {
             System.out.println("Введите \"" + n + "\" и нажмите Enter:");
-            if (sc.hasNextFloat()) {
-                k = sc.nextFloat();
+            if (sc.hasNextDouble()) {
+                k = sc.nextDouble();
                 System.out.println("Ввод \"" + n + "\" закончен");
                 break;
             } else {
@@ -56,9 +56,8 @@ public class QuadraticEquation {
         return d;
     }
 
-    private static void equation(double b, double c) {
+    private static void findLineEquation(double b, double c) {
         System.out.println("\"a\"=0. Решение уравнения \"b*x+c=0\"");
-        double x;
         if (b == 0 && c == 0) {
             System.out.println("\n\"x\" равен любому значению");
         } else if (b == 0) {
@@ -66,7 +65,7 @@ public class QuadraticEquation {
         } else if (c == 0) {
             System.out.println("\n\"x\" равен 0");
         } else {
-            x = -c / b;
+            double x = -c / b;
             System.out.println("\n\"x\" равен " + x);
         }
     }

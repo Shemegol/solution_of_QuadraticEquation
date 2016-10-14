@@ -48,8 +48,7 @@ public class QuadraticEquation {
     }
 
     private static double findDiscriminant(double a, double b, double c) {
-        double d;
-        d = Math.pow(b, 2) - 4 * a * c;
+        double d = Math.pow(b, 2) - 4 * a * c;
         System.out.println("Дискриминант равен " + d);
         return d;
     }

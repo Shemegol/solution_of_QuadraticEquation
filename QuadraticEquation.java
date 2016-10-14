@@ -5,7 +5,7 @@ import java.lang.Math;
 public class QuadraticEquation {
 
     private static Scanner sc = new Scanner(System.in).useDelimiter("[\r\n]+");
-
+//gkdsf
     public static void main(String[] args) {
         System.out.println("Решение квадратного уравнения a*x^2+b*x+c=0");
         double a = inputNum("a");
